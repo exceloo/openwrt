@@ -35,12 +35,10 @@ jobs:
       # 生成默认的config文件
       - name: Generate config file
         run: |
-          cd openwrt
           make defconfig
 
       - name: Build
         run: |
-          cd openwrt
           make -j$(nproc)
           
       # 获取编译完之后的文件
